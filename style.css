@@ -1,0 +1,188 @@
+/* Configurações Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --verde-escuro: #630b19;
+    --verde-principal: #bfe70d;
+    --verde-claro: #52b788;
+    --verde-fundo: #d8f3dc;
+    --texto: #2d3142;
+    --branco: #ffffff;
+}
+
+body {
+    color: var(--texto);
+    background-color: var(--branco);
+}
+
+/* Cabeçalho e Menu */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--verde-escuro);
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--branco);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: var(--verde-claro);
+}
+
+nav a {
+    color: var(--branco);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover, nav a.active {
+    color: var(--verde-claro);
+}
+
+/* Estilo das Seções */
+.section {
+    padding: 100px 50px 80px 50px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.bg-light {
+    background-color: var(--verde-fundo);
+}
+
+h2 {
+    font-size: 36px;
+    color: var(--verde-escuro);
+    margin-bottom: 30px;
+}
+
+/* Hero Section (Home) */
+.hero {
+    background: linear-gradient(rgba(27, 67, 50, 0.7), rgba(27, 67, 50, 0.9)), url('https://unsplash.com') center/cover;
+    color: var(--branco);
+    min-height: 100vh;
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* Botões */
+.btn {
+    background-color: var(--verde-claro);
+    color: var(--verde-escuro);
+    border: none;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: var(--branco);
+}
+
+/* Cards Interativos */
+.cards-container {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: var(--branco);
+    border: 2px solid var(--verde-principal);
+    border-radius: 8px;
+    padding: 30px;
+    width: 280px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: var(--verde-principal);
+    margin-bottom: 10px;
+}
+
+/* Painel de Informações Interativo */
+.painel {
+    margin-top: 30px;
+    background-color: var(--verde-escuro);
+    color: var(--branco);
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.painel button {
+    margin-top: 15px;
+    padding: 5px 15px;
+    background: transparent;
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Formulário de Contato */
+#form-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 500px;
+}
+
+#form-contato input, #form-contato textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--verde-principal);
+    border-radius: 5px;
+    outline: none;
+}
+
+#form-contato input:focus, #form-contato textarea:focus {
+    border-color: var(--verde-claro);
+    box-shadow: 0 0 5px var(--verde-claro);
+}
